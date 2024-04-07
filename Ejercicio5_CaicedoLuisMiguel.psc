@@ -6,13 +6,13 @@ Algoritmo Ejercicio5_CaicedoLuisMiguel
 	Dimension notas[30,5]
 	Dimension promedio[30]
 	Escribir "ingresa los nombres de los estudiantes"
-	para i<-0 Hasta 3 Hacer
+	para i<-0 Hasta 29 Hacer
 		Escribir "persona " i
 		Leer nombres[i]//se pide los nombres de los estudiantes y se van guardando en el arreglo
 	FinPara
 	
 	Escribir nombres[0]
-	para f<-0 Hasta 3 Con Paso 1 Hacer//numero de filas de la matriz
+	para f<-0 Hasta 29 Con Paso 1 Hacer//numero de filas de la matriz
 		para c<-0 Hasta 4 con paso 1 Hacer//numero de columnas de la matriz
 			Escribir "nota " f "," c
 			Leer notas[f,c]//se van almacenando las notas de los estudiantes
@@ -21,7 +21,7 @@ Algoritmo Ejercicio5_CaicedoLuisMiguel
 	FinPara
 	//a)  Determinar la nota definitiva de cada uno de los estudiantes que se calcula como la media aritmetica de las 5 notas obtenidas.
 	// Las notas definitivas de los estudiantes deberan ser almacenadas en un arreglo.
-	para f<-0 Hasta 3 Con Paso 1 Hacer
+	para f<-0 Hasta 29 Con Paso 1 Hacer
 		para c<-0 Hasta 4 con paso 1 Hacer
 			pro<-pro+notas[f,c]//se suman todas las notas de columna
 		FinPara
@@ -32,7 +32,7 @@ Algoritmo Ejercicio5_CaicedoLuisMiguel
 	//b)  Encontrar el estudiante que obtuvo la mayor nota definitiva.
 	
 	a<-0
-	para i<-0 Hasta 3 Hacer
+	para i<-0 Hasta 29 Hacer
 		si promedio[i]>a Entonces//se hace un bucle hasta que no haya nota mayor
 			a<-promedio[i]
 			b<-nombres[i]//segun la poscicion de la nota mayor se escribe la el nombre de la persona que esta en esa en esa misma pscicion
@@ -46,7 +46,7 @@ Algoritmo Ejercicio5_CaicedoLuisMiguel
 	
 	Dimension perder[30]
 	
-	para i<-0 Hasta 3 Hacer
+	para i<-0 Hasta 29 Hacer
 		si promedio[i]<=2 Entonces//si el promedio es menor a 2 entoces perdio
 			perder[i]<-nombres[i]//y se guarda el nombre que estaba en la misma posccion que ese promedio
 			//Escribir perder[i] " perdio la materia y debe repetirla"//esto es por si quiere visualizar quienes perdieron la materia
@@ -59,7 +59,7 @@ Algoritmo Ejercicio5_CaicedoLuisMiguel
 	
 	Dimension recu[30]
 	
-	para i<-0 Hasta 3 Hacer
+	para i<-0 Hasta 29 Hacer
 		si promedio[i]>2 y promedio[i]<3 Entonces//si el promedio es menor a 3 y mayor a 2 entoces tiene que hablitar la materia
 			recu[i]<-nombres[i]//y se guarda el nombre que estaba en la misma posccion que ese promedio
 			//Escribir recu[i] " tiene que habilitar la materia"//esto es por si quiere visualizar quienes tienen que habilitar la materia
@@ -68,7 +68,7 @@ Algoritmo Ejercicio5_CaicedoLuisMiguel
 	
 	//e)  Determinar cuantos estudiantes ganaron la materia.
 	
-	Para i<-0 Hasta 3 Hacer
+	Para i<-0 Hasta 29 Hacer
 		si promedio[i]>=3 Entonces //si el promedio es mayor o igual a 3 entonces significa que pasó la materia
 			gano<-gano+1//y por cada persona que ganó la materia se suma 1
 		FinSi
